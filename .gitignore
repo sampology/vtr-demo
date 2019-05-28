@@ -1,0 +1,16 @@
+coverage
+.coveralls.yml
+.idea
+node_modules
+*.log
+.travis.yml
+cache*
+.cache
+*.marko.js
+static/client
+static/*.js
+static/*.css
+static/scss-*
+static/js-*
+package-lock.json
+.eslintrc

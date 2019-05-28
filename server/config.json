@@ -1,0 +1,5 @@
+{
+  "environment": "development",
+  "port": 3103,
+  "domain": "http://localhost:3103/"
+}

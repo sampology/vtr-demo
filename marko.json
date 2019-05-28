@@ -1,0 +1,3 @@
+{
+  "tags-dir": [ "./client/marko/components", "./client/marko/modules", "./client/marko/layouts" ]
+}

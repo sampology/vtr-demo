@@ -1,0 +1,68 @@
+{
+  "dependencies": [
+    "require: ./layouts/**/index.marko",
+    "require: ./modules/**/index.marko",
+    "require: ./components/**/index.marko",
+    {
+      "type": "js",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js",
+      "external": false
+    },
+    {
+      "type": "js",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.js",
+      "external": false
+    },
+    {
+      "type": "js",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.js",
+      "external": false
+    },
+    {
+      "type": "js",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js",
+      "external": false
+    },
+    {
+      "type": "js",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.js",
+      "external": false
+    },
+    {
+      "type": "js",
+      "url": "https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotify.js"
+    },
+    {
+      "type": "js",
+      "url": "https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotifyButtons.js"
+    },
+    {
+      "type": "js",
+      "url": "https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotifyConfirm.js"
+    },
+    {
+      "type": "js",
+      "url": "https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/iife/PNotifyHistory.js"
+    },
+    {
+      "type": "css",
+      "url": "https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900"
+    },
+    "../theme/bootstrap/scss/bootstrap.scss",
+    {
+      "type": "css",
+      "url": "https://cdn.jsdelivr.net/npm/pnotify@4.0.0/dist/PNotifyBrightTheme.css",
+      "external": false
+    },
+    {
+      "type": "css",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.css",
+      "external": false
+    },
+    {
+      "type": "css",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.default.css",
+      "external": false
+    }
+  ]
+}

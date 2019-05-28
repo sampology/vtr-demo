@@ -1,0 +1,10 @@
+{
+  "public": [
+    "server/routes/public",
+    "server/api/public"
+  ],
+  "protected": [
+    "server/routes/protected",
+    "server/api/protected"
+  ]
+}
