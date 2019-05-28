@@ -1,0 +1,8 @@
+<div class="card">
+  <img src=input.result.artworkUrl100 class="card-img-top" alt=input.result.trackName>
+  <div class="card-body">
+    <h5 class="card-title">${input.result.trackName}</h5>
+    <p class="card-text">Artist: ${input.result.artistName}</p>
+    <button class="btn btn-sm btn-secondary" data-trackId=input.result.trackId on-click('handleFav')>Add to Favorite</button>
+  </div>
+</div>
