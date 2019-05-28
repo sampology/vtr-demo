@@ -13,19 +13,16 @@ module.exports = {
   },
   onMount () {
     this.subscribeTo(_Emitter)
-    .on('handleFav', trackId => {
-      // TODO Finalize favorites
-      console.log(trackId)
-      console.log(this.state.resultsList)
-      const record = this.state.resultsList.find(x => {
-        console.log(x.trackId)
+      .on('handleFav', trackId => {
+        const record = this.state.resultsList.find(x => String(x.trackId) === String(trackId))
+        if (record) {
+          const {favorites} = this.state
+          favorites.unshift(record)
+          return this.setState({
+            favorites: favorites.concat([])
+          })
+        }
       })
-      const { favorites } = this.state
-      favorites.unshift(record)
-      return this.setState({
-        favorites: favorites.concat([])
-      })
-    })
   },
   onUpdate () {
     if (this.state.isEmptyString) {
@@ -39,7 +36,9 @@ module.exports = {
   handleSearch () {
     const keyword = $('#keyword').val()
     if (!keyword) {
-      this.state.isEmptyString = true
+      return this.setState({
+        isEmptyString: true
+      })
     }
     return this.exeSearch(keyword)
   },
