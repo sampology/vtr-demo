@@ -1,0 +1,52 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-3">
+      <h4>Favorites</h4>
+      <if(state.favorites.length > 0)>
+      <ul>
+        <for|fav| of=state.favorites>
+        <li>${fav.trackName}</li>
+        </for>
+      </ul>
+      </if>
+    </div>
+    <div class="col-lg-9">
+      <div class="row">
+        <div class="col-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Artist, Album, Song etc" id="keyword">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button" on-click('handleSearch') disabled=state.searching>${state.searching ? 'searching...' : 'Search on iTunes'}</button>
+            </div>
+          </div>
+          <if(state.isEmptyString)>
+          <small class="text-danger">Cannot be empty</small>
+          </if>
+        </div>
+      </div>
+      <if(state.doneSearching)>
+      <div class="row mt-5">
+        <div class="col-12"><h3>Search results</h3></div>
+        <if(state.resultsFull && state.resultsFull.length > 0)>
+          <div class="row">
+          <for|result| of=state.resultsList>
+            <div class="col-md-4 col-lg-3">
+              <com-result result=result />
+            </div>
+          </for>
+          </div>
+          <if(state.resultsFull.length > 10)>
+          <div class="clearfix mb-3"></div>
+          <button class="btn btn-secondary btn-sm" on-click('loadMoreResults')>Load more</button>
+          </if>
+        </if>
+        <else>
+        <div class="col-12">
+          <p class="font-italic">No results :/</p>
+        </div>
+        </else>
+      </div>
+      </if>
+    </div>
+  </div>
+</div>
